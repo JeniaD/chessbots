@@ -35,7 +35,7 @@ def StartClassicGame(players, headers): # players, event):
 			if board.outcome(): break
 			black.Move()
 			node = node.add_variation(board.peek())
-		except Exception as e:
+		except BaseException as e:
 			error = e
 			break
 
